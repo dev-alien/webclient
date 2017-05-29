@@ -1,0 +1,249 @@
+/* TABS */
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+
+
+/* Change background color of links on hover */
+ul.tab li a:hover {background-color: #ddd;}
+
+/* Create an active/current tablink class */
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+}
+
+.overlay {
+    height: 0px;
+    overflow:visible;
+    pointer-events:none;
+    background:none !important;
+}
+
+.close_button {
+    width: 15px;
+    height: 20px;
+    background-color: dimgrey;
+    padding-left: 5px;
+    position: absolute; right: 6px; top: 5px;
+    cursor: pointer;
+}
+
+#contacts_window {
+    display: none;
+    top: 50px;
+    left: 760px;
+    font-family: dvsm, 'consolas', cursive;
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    background-color: #E3E3E3;
+    border: 1px solid black;
+}
+
+#contacts_caption {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    padding-top: 5px;
+    padding-left: 7px;
+    color: white;
+    width: 293px;
+    height: 25px;
+    background-color: black;
+    cursor: move;
+}
+
+#contacts_container {
+    width: calc(100% + 15px);
+    height: calc(100% - 105px);
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacts_content {
+    float: right;
+    width: 250px;
+    height: 40px;
+}
+
+.contacts_entry {
+    background-color: white;
+    margin-top: 5px;
+    width: 300px;
+    height: 40px;
+    padding-top: 5px;
+}
+
+.contacts_requests_caption {
+    background-color: white;
+    margin-top: 5px;
+    width: 295px;
+    height: 25px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.contacts_entry:hover {
+    background-color: lightgrey;
+}
+
+.contacts_icon {
+    position: absolute;
+    margin-left: 5px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid black;
+}
+
+.contact_name {
+    padding-top: 9px;
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.online_status {
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    background-color: indianred;
+}
+
+.online_status.green {
+    background-color: forestgreen;
+}
+
+
+.contacts_textarea {
+    font-size: 13px;
+    padding: 5px;
+    position: relative;
+    display:inline-block;
+    border-top: solid 2px #707070;
+    border-bottom: solid 2px #707070;
+    background-color: white;
+    height: 21px;
+    width: calc(100% - 10px);
+    z-index: 10;
+}
+
+.contacts_textarea:focus {
+    outline: none !important;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+.contacts_textarea[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #555;
+}
+
+.contacts_textarea[placeholder]:empty:focus:before {
+    content: "";
+}
+
+#contacts_menu {
+    position: absolute;
+    bottom: 0px;
+    height: 30px;
+    width: calc(100% - 5px);
+    background-color: #E3E3E3;
+    margin-left: 5px;
+}
+
+.add_contact_icon {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-image: url("../media/add_contact.png");
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    border-right: solid 1px black;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    border-left: solid 1px black;
+}
+
+.add_contact_icon:hover {
+    background-color: lightgrey;
+}
+
+.contacts_tab {
+    float: right;
+    height: 30px;
+    background-size: 26px 26px;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    border-left: solid 1px black;
+}
+
+.contacts_tab:hover {
+    background-color: lightgrey;
+}
+
+.active {
+    background-color: white !important;
+}
+
+/* Style the links inside the list items */
+.contacts_tab a {
+    padding-top: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: bold;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.remove_icon {
+    cursor: pointer;
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 5px;
+    background-image: url("../media/remove.png");
+    background-size: 100%;
+}
+
+.accept_icon {
+     cursor: pointer;
+     float: right;
+     width: 22px;
+     height: 22px;
+     margin-top: 4px;
+     background-image: url("../media/checkmark.svg");
+     background-size: 100%;
+ }
+
+.incoming_contact_name {
+    padding-top: 9px;
+    padding-left: 45px;
+    font-size: 14px;
+    font-weight: bold;
+}

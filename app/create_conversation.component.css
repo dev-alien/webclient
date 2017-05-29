@@ -1,0 +1,219 @@
+.enable_blur {
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
+}
+
+#add_contact_status {
+    z-index: 10;
+
+    position: absolute;
+    border: 1px solid black;
+    background-color: white;
+    width: 250px;
+    height: 80px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -15px;
+    margin: auto;
+}
+
+.expanded_add_contact_status {
+    height: 110px !important;
+}
+
+#add_contact_status_caption {
+    padding-top: 5px;
+    padding-left: 7px;
+    color: white;
+    width: calc(100%-5px);
+    height: 25px;
+    background-color: darkgreen;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    cursor: move;
+}
+
+#add_contact_status_caption_title {
+    max-width: calc(100% - 25px);
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#add_contact_status_message {
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.close_button {
+    width: 15px;
+    height: 20px;
+    background-color: dimgrey;
+    padding-left: 5px;
+    position: absolute; right: 6px; top: 5px;
+    cursor: pointer;
+}
+
+#add_contact_window {
+    display: none;
+    top: 50px;
+    left: 123px;
+    font-family: dvsm, 'consolas', cursive;
+    position: fixed;
+    width: 300px;
+    padding-bottom: 30px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#add_contact_caption {
+    padding-top: 5px;
+    padding-left: 7px;
+    color: white;
+    width: 293px;
+    height: 25px;
+    background-color: black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    cursor: move;
+}
+
+#add_contact_caption_title {
+    max-width: calc(100% - 25px);
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#add_contact_container {
+    width: calc(100% + 15px);
+    padding-bottom: 10px;
+    position: relative;
+    background-color: white;
+    height: calc(100% - 80px);
+    overflow: hidden;
+}
+
+.close_status_button {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.form-container {
+    height: 100%;
+    padding-left: 10px;
+    width: calc(100% - 50px);
+    text-decoration: none;
+    vertical-align: middle;
+}
+.form-field {
+    border: 2px solid #7A7A7A;
+    background: #ffffff;
+    border-radius: 0px;
+    color: #000000;
+    padding:8px;
+    margin-bottom: 5px;
+    width: calc(100% - 15px);
+}
+.form-field:focus {
+    background: #fff;
+    color: #1f1f1f;
+}
+.form-container h2 {
+    text-shadow: #fdf2e4 0 1px 0;
+    font-size:18px;
+    margin: 0 0 10px 0;
+    font-weight:bold;
+    text-align:center;
+}
+.form-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-shadow: #fdf2e4 0 1px 0;
+}
+
+.submit-container {
+    background-color: lightgray;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 35px;
+}
+
+.submit-button {
+    border: 4px solid #a09dad;
+    background: #ffffff;
+    text-shadow: #ffffff 0 1px 0;
+    color: #000000;
+    margin-top: 2px;
+    padding: 3px 18px;
+    font-size: 14px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.submit-button:hover {
+    border: 4px solid black;
+}
+
+.submit-button:active {
+    border: 4px solid #000000;
+}
+
+#password_hint {
+    font-size: 10px;
+    width: 100%;
+    display: none;
+    border: 1px black;
+}
+
+#email_hint {
+    font-size: 10px;
+    width: 100%;
+    display: none;
+    border: 1px black;
+    margin-bottom: 5px;
+}
+
+.password_requirements {
+    position: relative;
+    left: -5px;
+}
+
+#add_contact_form_container {
+    z-index: -1;
+    width: calc(100% + 15px);
+    height: calc(100% - 75px);
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#password_hint ul {
+    margin-left: -20px;
+}
+
+.optional {
+    color: dimgrey;
+}
+
+.status {
+    width: 100%;
+    background-color: lightgrey;
+}

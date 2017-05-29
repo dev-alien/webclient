@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>@lien ALPHA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        @font-face {
+            font-family: dvsm;
+            src: url(fonts/DejaVuSansMono.ttf);
+        }
+        h1 {
+            font-family: dvsm, 'Comic Sans MS', cursive;
+        }
+    </style>
+
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+
+
+    <meta charset="utf-8">
+    <title>Alien.pm</title>
+    <link rel="shortcut icon" href="media/logo/logo_32x32.ico">
+    <link rel="apple-touch-icon image_src" href="media/logo/logo_158x158.png">
+    <link rel="stylesheet" href="deps/jquery-ui-1.12.1/jquery-ui.theme.css">
+    <link rel="stylesheet" href="deps/jquery-ui-1.12.1/jquery-ui.css">
+    <script src="deps/jquery-3.1.1.min.js"></script>
+    <script src="deps/jquery-ui-1.12.1/jquery-ui.js"></script>
+
+    <link href="css/conversation_box.css" rel="stylesheet" type="text/css">
+    <link href="css/conversations.css" rel="stylesheet" type="text/css">
+    <link href="css/perfect-scrollbar.min.css" rel="stylesheet" type="text/css">
+    <link href="css/scrollbars.css" rel="stylesheet" type="text/css">
+    <link href="css/registration.css" rel="stylesheet" type="text/css">
+    <link href=”https://fonts.googleapis.com/icon?family=Material+Icons" rel=”stylesheet”>
+    <!--
+    <link href="css/authorization.css" rel="stylesheet" type="text/css">
+    -->
+
+
+    <script type="text/javascript" src="../scripts/draggable_window.js"></script>
+    <script type="text/javascript" src="../scripts/placeholder_div.js"></script>
+    <script type="text/javascript" src="../scripts/conversation_box.js"></script>
+    <script type="text/javascript" src="../scripts/perfect-scrollbar.jquery.min.js"></script>
+    <script type="text/javascript" src="../scripts/scrollbars.js"></script>
+    <script type="text/javascript" src="../scripts/registration.js"></script>
+    <script type="text/javascript" src="deps/bundle.js"></script>
+    <script type="text/javascript" src="deps/aes-js.js"></script>
+    <script type="text/javascript" src="node_modules/base64-js/base64js.min.js"></script>
+    <script type="text/javascript" src="deps/jsencrypt.min.js"></script>
+
+    <script src="main.js"></script>
+    <script src="init.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+<app></app>
+
+</body>

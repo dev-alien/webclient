@@ -1,0 +1,18 @@
+<div class="ol" *ngIf="isShown">
+    <div class="ol_content">
+        <div id="recaptcha_form">
+            <div id='recaptcha_form_caption'>
+                <div id="recaptcha_form_caption_title">Captcha is required to continue</div>
+            </div>
+            <div id="recaptcha_form_content">
+                <ng2-google-recaptcha
+                        [siteKey]="recaptchaSiteKey"
+                        (onCaptchaComplete)="onCaptchaComplete($event)">
+                </ng2-google-recaptcha>
+                <div id="buttons">
+                    <button md-raised-button (click)="onCaptchaCancelled()" color="warn">Cancel the request</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

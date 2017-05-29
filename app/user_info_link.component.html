@@ -1,0 +1,13 @@
+<span *ngIf="user.login" class="login">
+    @{{ user.login }}
+</span>
+<span *ngIf="user.info && (user.info.first_name || user.info.last_name)" class="name">
+    (
+    <span *ngIf="user.info.first_name">
+        {{ user.info.first_name }}
+    </span>
+    <span *ngIf="user.info.last_name">
+        {{ user.info.last_name }}
+    </span>
+    )
+</span>

@@ -1,0 +1,193 @@
+.force_display {
+    display: block !important;
+}
+
+body {
+    margin: 0;
+    font-family: dvsm, 'consolas', cursive;
+}
+
+header {
+    background-color: #000000;
+    color: rgba(0,0,0,.87);
+    border-bottom: 1px solid #D4D4D5;
+    height: 31px;
+    min-width: 800px;
+    text-align: center;
+}
+
+.header_item {
+    background: red 0 0;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.navigation {
+    display: inline;
+    list-style: none; /* Отключение отображения маркеров. */
+}
+
+li.left {
+    float: left;
+    border-right: 1px solid #505050;
+}
+
+
+.right {
+    float: right;
+    border-left: 1px solid #505050;
+}
+
+
+
+.navigation li a.menubutton {
+   font-size: 0.9rem;
+   font-weight: bold;
+   color: #ffffff;
+   display: block;
+   padding: 7px 10px 7px 10px;
+   text-decoration: none; /* Устранение подчёркивания ссылок. */
+   position: relative;
+}
+
+.navigation li a.icon_button {
+   font-size: 1rem;
+   font-weight: 500;
+   color: rgba(0,0,0,.87);
+   display: block;
+   text-decoration: none;
+   position: relative;
+}
+
+
+.navigation li a:hover {
+   background: #303030;
+}
+
+.logo_container {
+    float: left;
+    height: 30px;
+    margin-left: 50px;
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: #000000;
+    border-right: 1px solid #707070;
+    border-left: 1px solid #707070;
+}
+
+.icon_container {
+    padding-left: auto;
+    padding-right: auto;
+    border-right: 1px solid #505050;
+    width: 30px;
+    height: 30px;
+}
+
+
+.right_icon {
+    height: 30px;
+    text-align: center;
+    width: 34px;
+    padding: 0 auto 0 auto;
+    float: right;
+    border-right: 1px solid #505050;
+}
+
+.icons_divider {
+    border-left: 1px solid #505050;
+}
+
+/* CHECKBOXES */
+
+/*
+label {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+*/
+
+input[type=checkbox].css-checkbox {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height:1px;
+    width:1px;
+    margin:-1px;
+    padding:0;
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left:20px;
+    height:15px;
+    display:inline-block;
+    line-height:15px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -15px;
+}
+
+.css-label{
+    background-image:url(../img/dark-check-green.png);
+}
+
+.web-two-style{background-image:url(../img/web-two-style.png);}
+
+input[type=checkbox].css-checkbox.med + label.css-label.med {
+    padding-left:22px;
+    height:17px;
+    display:inline-block;
+    line-height:17px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox.med:checked + label.css-label.med {
+
+    background-position: 0 -17px;
+}
+input[type=checkbox].css-checkbox.sme + label.css-label.sme {
+    padding-left:22px;
+    height:16px;
+    display:inline-block;
+    line-height:16px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox.sme:checked + label.css-label.sme{
+
+    background-position: 0 -16px;
+}
+input[type=checkbox].css-checkbox.lrg + label.css-label.lrg {
+    padding-left:22px;
+    height:20px;
+    display:inline-block;
+    line-height:20px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    font-size:15px;
+    vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox.lrg:checked + label.css-label.lrg{
+
+    background-position: 0 -20px;
+}

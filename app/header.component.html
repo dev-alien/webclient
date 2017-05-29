@@ -1,0 +1,57 @@
+<header xmlns:javascript="http://www.w3.org/1999/xhtml">
+    <span class="logo_container">
+        <img src="media/logo/primary_logo_inverted_v2.png" alt="Alien" style="height:30px;width:auto;">
+    </span>
+    <ul *ngIf="sSessionManager.isAuthorized" class="navigation">
+        <li class="left">
+            <div (click)="openConversations()">
+                <a class="menubutton" href="#">
+                    CONVERSATIONS
+                </a>
+            </div>
+        </li>
+        <li class="left">
+            <div (click)="openContacts()">
+                <a class="menubutton" href="#">
+                    CONTACTS
+                </a>
+            </div>
+        </li>
+        <!--
+        <li class="right_icon">
+            <a href="http://www.internet-technologies.ru/articles" class="icon_button">
+                <img src="media/keyring.png" alt="Alien" style="height:27px;width:auto;">
+            </a>
+        </li>
+        -->
+        <li class="right_icon icons_divider" (click)="logOut();">
+            <a href="#" class="icon_button">
+                <img src="media/logout.png" alt="Logout" style="padding-top: 2px; height:25px;width:auto;">
+            </a>
+        </li>
+    </ul>/
+
+    <ul *ngIf="!sSessionManager.isAuthorized" class="navigation">
+        <li class="left">
+            <div (click)="openSignIn()">
+                <a class="menubutton" href="#">
+                    SIGN IN
+                </a>
+            </div>
+        </li>
+        <li class="left">
+            <div (click)="openSignUp();">
+                <a class="menubutton" href="#">
+                    SIGN UP
+                </a>
+            </div>
+        </li>
+        <!--
+        <li class="left">
+            <a class="menubutton" href="http://www.internet-technologies.ru/articles" target="_blank">
+                ABOUT
+            </a>
+        </li>
+        -->
+    </ul>
+</header>

@@ -1,0 +1,11 @@
+<div #mainBlock id='sign_in_status_window' [ngClass]="{'force_display': isShown}" onmousedown="draggable_window.showIt(this)">
+    <div id='sign_in_status_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
+        <div id="sign_in_status_caption_title">{{ caption }}</div>
+        <div class="close_button" (click)="isShown=false">
+            x
+        </div>
+    </div>
+    <div id="sign_in_status_form_container">
+        {{ status }}
+    </div>
+</div>

@@ -1,0 +1,137 @@
+#contacts_container {
+    width: calc(100% + 15px);
+    height: calc(100% - 105px);
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contacts_content {
+    float: right;
+    width: 200px;
+    height: 40px;
+}
+
+.contacts_entry {
+    cursor: pointer;
+    background-color: white;
+    margin-top: 5px;
+    width: 270px;
+    height: 40px;
+    padding-top: 5px;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+}
+
+.contacts_entry:hover {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+.contacts_icon {
+    position: absolute;
+    margin-left: 5px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid black;
+}
+
+.contact_name {
+    padding-top: 9px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.online_status {
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px black;
+    border-right: solid 2px black;
+    background-color: indianred;
+}
+
+.online_status.green {
+    background-color: forestgreen;
+}
+
+.contacts_textarea:focus {
+    outline: none !important;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+.contacts_textarea[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #555;
+}
+
+.contacts_textarea[placeholder]:empty:focus:before {
+    content: "";
+}
+
+#contacts_menu {
+    position: absolute;
+    bottom: 0px;
+    height: 30px;
+    width: calc(100% - 5px);
+    background-color: #E3E3E3;
+    margin-left: 5px;
+}
+
+.add_contact_icon {
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-image: url("../media/add_contact.png");
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    border-right: solid 1px black;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    border-left: solid 1px black;
+}
+
+.add_contact_icon:hover {
+    background-color: lightgrey;
+}
+
+.active {
+    background-color: white !important;
+}
+
+.added_icon {
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+    width: 22px;
+    height: 22px;
+    margin-top: 4px;
+    background-size: 100%;
+}
+
+.added_icon_display {
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+    width: 22px;
+    height: 22px;
+    margin-top: 4px;
+    background-image: url("../media/checkmark.svg");
+    background-size: 100%;
+}
+
+.incoming_contact_name {
+    padding-top: 9px;
+    padding-left: 45px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.users_container {
+    max-height: 300px;
+}

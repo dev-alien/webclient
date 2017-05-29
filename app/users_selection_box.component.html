@@ -1,0 +1,28 @@
+<div #users_container class="users_container">
+    <div
+         *ngFor="let entry of users"
+         class="contacts_entry"
+         [ngClass]="{'selected_user': isSelected(entry)}"
+         (click)="select(entry)"
+    >
+        <div [ngClass]="{ added_icon_display: isSelected(entry) }" class="added_icon"></div>
+        <div class="contacts_icon">
+            <div class="online_status green">
+            </div>
+        </div>
+        <div class="contacts_content">
+            <div class="contact_name">
+                            <span class="contact_first_name" *ngIf="entry.info.first_name" >
+                                {{ entry.info.first_name }}
+                            </span>
+                <span class="contact_last_names" *ngIf="entry.info.first_name" >
+                                {{ entry.info.last_name }}
+                            </span>
+                @{{ entry.login }}
+            </div>
+            <div class="last_">
+
+            </div>
+        </div>
+    </div>
+</div>

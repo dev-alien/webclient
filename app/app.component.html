@@ -1,0 +1,13 @@
+<mheader></mheader>
+<sign-up></sign-up>
+<sign-in></sign-in>
+<contacts></contacts>
+<conversations></conversations>
+<create-conversation></create-conversation>
+<recaptcha-block #recaptchaBlock></recaptcha-block>
+<div *ngFor="let entry of sUserSession.conversations" class="contacts_entry">
+    <conversation
+            *ngIf="entry.isOpen"
+            [conversation]="entry"
+    ></conversation>
+</div>

@@ -1,0 +1,15 @@
+.disabled_link :link {
+    color: white;
+}
+
+.disabled_link :visited {
+    color: white;
+}
+
+.disabled_link :hover {
+    color: white;
+}
+
+.disabled_link :active {
+    color: white;
+}

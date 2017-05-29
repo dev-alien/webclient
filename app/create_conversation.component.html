@@ -1,0 +1,26 @@
+<div #self [ngClass]="{'force_display': isOpen}" id='add_contact_window' onmousedown="draggable_window.showIt(this)">
+    <div id='add_contact_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
+        <div id="add_contact_caption_title">New conversation...</div>
+        <div class="close_button" (click)="isOpen=false">
+            x
+        </div>
+    </div>
+    <div id="add_contact_form_container" [ngClass]="{ enable_blur: mSignUpStarted }">
+        <form class="form-container">
+            <div class="form-title"><h2>Create a new conversation</h2></div>
+            <div class="form-title">Conversation name:</div>
+            <input class="form-field" [(ngModel)]="name" type="text" name="login" /><br />
+            <div class="form-title">Participants selection:</div>
+            <users_selection_box
+                [users]="sSessionManager.contactsArray()"
+                [result]="participants"
+            ></users_selection_box>
+            <div class="status" *ngIf="showStatus">
+                {{ status }}
+            </div>
+        </form>
+    </div>
+    <div class="submit-container" *ngIf="!requestStarted">
+        <input class="submit-button" (click)="createRequest()" type="submit" value="Submit" />
+    </div>
+</div>

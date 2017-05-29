@@ -1,0 +1,86 @@
+<div [ngSwitch]="message.type">
+    <div *ngSwitchCase="1"> <!-- Common encrypted message -->
+        <div [ngSwitch]="(
+            !!message.sender &&
+            (
+                (message.sender === sSessionManager.profile.ext_uid.stringVal) ||
+                ((!!message.sender.ext_uid) && (message.sender.ext_uid.stringVal === sSessionManager.profile.ext_uid.stringVal))
+            )
+        )">
+            <div *ngSwitchCase="true"> <!-- The message was sent by the current user -->
+                <div class="conversation_box_right_entry">
+                    <div class="message_content">
+                        {{ message.decryptedMessage }}
+                    </div>
+                </div>
+            </div>
+            <div *ngSwitchCase="false"> <!-- The message wasn't sent by the current user -->
+                <div class="conversation_box_left_entry">
+                    <div class="message_content">
+                        {{ message.decryptedMessage }}
+                    </div>
+                    <div>
+                        <!-- Todo: avatar -->
+                        <user_info_link
+                                style="
+                                    font-size: 12px;
+                                    margin-left: 5px;
+                                "
+                                *ngIf="message.sender"
+                                [user]="message.sender"
+                        ></user_info_link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngSwitchCase="0"> <!-- System message -->
+        <div [ngSwitch]="message.message" class="system_message">
+            <div *ngSwitchCase="'$render_add_participants'"> <!-- New participants information -->
+                The following users were invited into the conversation: <br>
+                <div *ngFor="let participant of message.data.fetched_participants">
+                    <user_info_link [user]="participant"></user_info_link>
+                </div>
+            </div>
+            <div *ngSwitchDefault="">
+                UNABLE TO RENDER SYSTEM MESSAGE: {{ message.message }}
+            </div>
+        </div>
+    </div>
+</div>
+<!--
+
+<div class="conversation_box_left_entry">
+    <div class="message_content">
+    {{ message.message }}
+    </div>
+    <div>
+    <div class="message_author_icon"></div>
+    <div *ngIf="message.sender && message.sender.info"
+         class="message_author_name">
+        {{ message.sender.info.first_name }}
+    </div>
+</div>
+
+<div *ngIf="!message.sender || message.sender !== sSessionManager.profile.ext_uid.stringVal" class="conversation_box_left_entry">
+    <div class="message_content">
+        {{ message.renderMessage() }}
+    </div>
+    <div>
+        <div class="message_author_icon"></div>
+        <div *ngIf="message.sender && message.sender.info"
+        class="message_author_name">
+            {{ message.sender.info.first_name }}
+        </div>
+    </div>
+</div>
+<div *ngIf="message.sender &&
+            ((message.sender === sSessionManager.profile.ext_uid.stringVal) ||
+            (message.sender.ext_uid.stringVal === sSessionManager.profile.ext_uid.stringVal))"
+     class="conversation_box_right_entry">
+    <div class="message_content">
+        {{ message.renderMessage() }}
+    </div>
+</div>
+
+-->

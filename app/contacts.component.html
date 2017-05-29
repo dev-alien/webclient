@@ -1,0 +1,101 @@
+<recaptcha-block #recaptchaBlock></recaptcha-block>
+<status-window #statusWindow></status-window>
+<contact-add #contactAdd></contact-add>
+
+<div #mainBlock [ngClass]="{'force_display': isOpen}" id='contacts_window' onmousedown="draggable_window.showIt(this)">
+    <div id='contacts_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
+        <div id="contacts_caption_title">Contacts</div>
+        <div class="close_button" (click)="isOpen = false">
+            x
+        </div>
+    </div>
+    <div #contactsContainer id="contacts_container">
+        <div id="London" class="tabcontent">
+            <div *ngFor="let entry of contacts | keys" class="contacts_entry">
+                <div class="remove_icon" (click)="deleteContact(entry)"></div>
+                <div class="contacts_icon">
+                    <div class="online_status green">
+                    </div>
+                </div>
+                <div class="contacts_content">
+                    <div class="contact_name">
+                        <span class="contact_first_name" *ngIf="entry.value.info.first_name" >
+                            {{ entry.value.info.first_name }}
+                        </span>
+                        <span class="contact_last_names" *ngIf="entry.value.info.first_name" >
+                            {{ entry.value.info.last_name }}
+                        </span>
+                        @{{ entry.value.login }}
+                    </div>
+                    <div class="last_">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <div class="contacts_requests_caption">Incoming requests:</div>
+            <div *ngFor="let entry of incomingRequests | keys" class="contacts_entry">
+                <div class="remove_icon" (click)="deleteRequest(entry, true)"></div>
+                <div class="accept_icon" (click)="acceptRequest(entry)"></div>
+                <div class="contacts_icon">
+                    <div class="online_status green">
+                    </div>
+                </div>
+                <div class="contacts_content">
+                    <div class="incoming_contact_name">
+                        <span class="contact_first_name" *ngIf="entry.value.info.first_name" >
+                            {{ entry.value.info.first_name }}
+                        </span>
+                        <span class="contact_last_names" *ngIf="entry.value.info.first_name" >
+                            {{ entry.value.info.last_name }}
+                        </span>
+                        @{{ entry.value.login }}
+                    </div>
+                    <div class="last_">
+
+                    </div>
+                </div>
+            </div>
+            <div class="contacts_requests_caption">Outgoing requests:</div>
+            <div *ngFor="let entry of outgoingRequests | keys" class="contacts_entry">
+                <div class="remove_icon" (click)="deleteRequest(entry, false)"></div>
+                <div class="contacts_icon">
+                    <div class="online_status green">
+                    </div>
+                </div>
+                <div class="contacts_content">
+                    <div class="contact_name">
+                        <span class="contact_first_name" *ngIf="entry.value.info.first_name" >
+                            {{ entry.value.info.first_name }}
+                        </span>
+                        <span class="contact_last_names" *ngIf="entry.value.info.first_name" >
+                            {{ entry.value.info.last_name }}
+                        </span>
+                        @{{ entry.value.login }}
+                    </div>
+                    <div class="last_">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="placholder_div contacts_textarea" placeholder="Search through your contacts..." contentEditable="true" ></div>
+    <div id="contacts_menu">
+            <div class="add_contact_icon" (click)="openAddContact()"></div>
+            <div class="contacts_tab" [ngClass]="{'active': (activetab===1)}">
+                <a href="javascript:void(0)" class="tablinks"
+                   (click)="openTab(event, 'Paris', 1)">
+                    Requests
+                </a>
+            </div>
+            <div class="contacts_tab" [ngClass]="{'active': (activetab===2)}">
+                <a id="defaultOpen" href="javascript:void(0)"
+                   class="tablinks" (click)="openTab(event, 'London', 2)">
+                    Contacts
+                </a>
+            </div>
+    </div>
+</div>

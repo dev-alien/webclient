@@ -1,0 +1,15 @@
+<div #selfcb  [ngClass]="{'force_display': isShown}" class='conversation_box_window' onmousedown="draggable_window.showIt(this)">
+    <div class='conversation_box_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
+        <div id="conversation_box_caption_title">&#9993; {{ conversation.name }}</div>
+        <div class="close_button" (click)="conversation.isOpen = false">
+            x
+        </div>
+    </div>
+    <div #messages_container id="conversation_box_container">
+        <div #auto_fetch [ngClass]="{'auto_fetch_visible': fetchStatus.length > 0}" (click)="fetchMore()">{{ fetchStatus }}</div>
+        <message *ngFor="let message of conversation.messages" [message]="message"></message>
+        <div class="conversation_box_empty_entry"></div>
+    </div>
+    <div #message_box class="conversation_box_textarea" contentEditable="true" (keydown)="keydown($event)"></div>
+    <!--<div class="conversation_resize_box" onmouseup='unFocus(); hook(event);' onmousemove="unFocus()" onmousedown='hook(event);'></div>-->
+</div>

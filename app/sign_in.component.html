@@ -1,0 +1,36 @@
+<recaptcha-block #recaptchaBlock></recaptcha-block>
+<status-window #statusWindow></status-window>
+
+<div #mainBlock [ngClass]="{'force_display': isOpen}" id='sign_in_window' onmousedown="draggable_window.showIt(this)">
+    <div id='sign_in_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
+        <div id="sign_in_caption_title">Sign in</div>
+        <div class="close_button" (click)="isOpen = false">
+            x
+        </div>
+    </div>
+    <div id="sign_in_status" *ngIf="mSignUpStarted"  [ngClass]="{'expanded_sign_in_status': mCloseAllowed}">
+        <div id='sign_in_status_caption'>
+            <div id="sign_in_status_caption_title">Processign the request</div>
+        </div>
+        <div id="sign_in_status_message">
+            {{ mSignUpStatus }}
+            <div *ngIf="mCloseAllowed" class="close_status_button" >
+                <input class="submit-button" (click)="mSignUpStarted=false; mCloseAllowed=false;" type="submit" value="Close" />
+            </div>
+        </div>
+    </div>
+    <div id="sign_in_form_container" [ngClass]="{ enable_blur: mSignUpStarted }">
+        <form class="form-container">
+            <div class="form-title"><h2>Sign in</h2></div>
+            <div class="form-title">Login</div>
+            <input class="form-field" [(ngModel)]="login" type="text" name="login" /><br />
+            <div class="form-title">Password</div>
+            <input class="form-field" [(ngModel)]="password" type="password" id="pwd_input" name="password" onfocus="reg_focus()" onblur="reg_blur()"/><br />
+            <input class="form-field css-checkbox lrg" [checked]="sApiClient.storeSession" (change)="sApiClient.storeSession = !sApiClient.storeSession" type="checkbox" id="keep_me_signed_in">
+            <label for="keep_me_signed_in" class="css-label lrg web-two-style">Keep me signed in</label>
+        </form>
+    </div>
+    <div class="submit-container" *ngIf="!mSignUpStarted">
+        <input class="submit-button" (click)="performSignIn()" type="submit" value="Submit" />
+    </div>
+</div>

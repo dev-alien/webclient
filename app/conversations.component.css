@@ -1,0 +1,150 @@
+#conversations_window {
+    display: none;
+    top: 50px;
+    left: 123px;
+    font-family: dvsm, 'consolas', cursive;
+    position: fixed;
+    width: 300px;
+    height: 400px;
+    background-color: #E3E3E3;
+    border: 1px solid black;
+}
+
+#conversations_caption {
+    padding-top: 5px;
+    padding-left: 7px;
+    color: white;
+    width: 293px;
+    height: 25px;
+    background-color: black;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    cursor: move;
+}
+
+#conversations_container {
+    width: calc(100% + 15px);
+    height: calc(100% - 105px);
+    padding-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.conversation_content {
+    float: right;
+    width: 250px;
+    height: 40px;
+}
+
+.conversation_entry {
+    cursor: pointer;
+    background-color: white;
+    margin-top: 5px;
+    width: 300px;
+    height: 50px;
+    padding-top: 5px;
+}
+
+.conversation_entry:hover {
+    background-color: lightgrey;
+}
+
+.conversation_icon {
+    float: left;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.conversation_title {
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.last_message_icon {
+    float: left;
+    margin-top: 5px;
+    margin-left: 6px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.last_message_text {
+    float: right;
+    padding-top: 10px;
+    font-size: 12px;
+    width: 218px;
+}
+
+#conversations_textarea {
+    font-size: 13px;
+    padding: 5px;
+    position: relative;
+    display:inline-block;
+    border-top: solid 2px #707070;
+    border-bottom: solid 2px #707070;
+    background-color: white;
+    height: 21px;
+    width: calc(100% - 10px);
+    z-index: 10;
+}
+
+#conversations_textarea:focus {
+    outline: none !important;
+    border-top:2px solid black;
+    border-bottom:2px solid black;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+
+#conversations_textarea[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #555;
+}
+
+#conversations_textarea[placeholder]:empty:focus:before {
+    content: "";
+}
+
+#conversations_menu {
+    position: absolute;
+    bottom: 0px;
+    height: 30px;
+    width: calc(100% - 5px);
+    background-color: #E3E3E3;
+    margin-left: 5px;
+}
+
+.close_button {
+    width: 15px;
+    height: 20px;
+    background-color: dimgrey;
+    padding-left: 5px;
+    position: absolute; right: 6px; top: 5px;
+    cursor: pointer;
+}
+
+.new_conversation_icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url("../media/new_conversation.png");
+    background-repeat: no-repeat;
+    background-size: 26px 26px;
+    border-right: solid 1px black;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    border-left: solid 1px black;
+}
+
+.new_conversation_icon:hover {
+    background-color: lightgrey;
+}

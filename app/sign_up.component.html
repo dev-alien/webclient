@@ -1,0 +1,60 @@
+<recaptcha-block #recaptchaBlock></recaptcha-block>
+<status-window #statusWindow></status-window>
+
+<div #mainBlock [ngClass]="{'force_display': isOpen}" id='registration_window' onmousedown="draggable_window.showIt(this)">
+    <div id='registration_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
+        <div id="registration_caption_title">Sign up</div>
+        <div class="close_button" (click)="isOpen=false">
+            x
+        </div>
+    </div>
+    <div id="registration_status" *ngIf="mSignUpStarted"  [ngClass]="{'expanded_registration_status': mCloseAllowed}">
+        <div id='registration_status_caption'>
+            <div id="registration_status_caption_title">Processign the request</div>
+        </div>
+        <div id="registration_status_message">
+            {{ mSignUpStatus }}
+            <div *ngIf="mCloseAllowed" class="close_status_button" >
+                <input class="submit-button" (click)="mSignUpStarted=false; mCloseAllowed=false;" type="submit" value="Close" />
+            </div>
+        </div>
+    </div>
+    <div id="registration_form_container" [ngClass]="{ enable_blur: mSignUpStarted }">
+        <form class="form-container">
+            <div class="form-title"><h2>Sign up</h2></div>
+            <div class="form-title">Login</div>
+            <input class="form-field" [(ngModel)]="requestBody.login" type="text" name="login" /><br />
+            <div class="form-title">Password</div>
+            <input class="form-field" [(ngModel)]="mPassword" type="password" id="pwd_input" name="password" onfocus="reg_focus()" onblur="reg_blur()"/><br />
+            <div id="password_hint">
+                Cryptography begins right here! There is no way to restore your account password!
+                <p>Minimum password length:</p>
+                <ul class="password_requirements">
+                    <li>10 characters(10 left)</li>
+                </ul>
+                <p>Password must contain:</p>
+                <ul class="password_requirements">
+                    <li>Uppercase characters</li>
+                    <li>Lowercase characters</li>
+                    <li>Base 10 digits (0 through 9)</li>
+                </ul>
+            </div>
+            <div class="form-title">Select the closest region</div>
+            <select id="soflow" name="region" [(ngModel)]="requestBody.region">
+                <option *ngFor="let r of regions" [ngValue]="r">{{ r.info }}</option>
+            </select>
+            <div class="form-title">Email <span class="optional">(optional)</span></div>
+            <input class="form-field"  [(ngModel)]="requestBody.info.email" type="text" onfocus="email_focus()" onblur="email_blur()" name="email" /><br />
+            <div id="email_hint">
+                It can be used to confim security changes of your account
+            </div>
+            <div class="form-title">First name <span class="optional">(optional)</span></div>
+            <input class="form-field" [(ngModel)]="requestBody.info.first_name" type="text" name="fn" /><br />
+            <div class="form-title">Last name <span class="optional">(optional)</span></div>
+            <input class="form-field" [(ngModel)]="requestBody.info.last_name" type="text" name="ln" /><br />
+        </form>
+    </div>
+    <div class="submit-container" *ngIf="!mSignUpStarted">
+        <input class="submit-button" (click)="performSignUp()" type="submit" value="Submit" />
+    </div>
+</div>
