@@ -46,7 +46,12 @@ export class SignInComponent {
         });
     }
 
-    public performSignIn(): void {
+    private onSubmit(ev: any) {
+        ev.preventDefault();
+        this.performSignIn();
+    }
+
+    private performSignIn(): void {
         var self = this;
 
         this.statusWindow.show();

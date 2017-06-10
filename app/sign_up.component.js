@@ -89,6 +89,10 @@ System.register(["@angular/core", "./session.service", "./window_mgr.service", "
                         self.statusWindow.setStatus(status);
                     }, this.mRecaptchaBlock, false, test_password_hash);
                 };
+                SignUpComponent.prototype.onSubmit = function (ev) {
+                    ev.preventDefault();
+                    this.performSignUp();
+                };
                 SignUpComponent.prototype.performSignUp = function () {
                     //Todo: make it dynamically chosen
                     console.log(this.requestBody.login);

@@ -75,6 +75,11 @@ export class SignUpComponent implements OnInit {
             }, this.mRecaptchaBlock, false, test_password_hash);
     }
 
+    private onSubmit(ev: any) {
+        ev.preventDefault();
+        this.performSignUp();
+    }
+
     private performSignUp(): void {
         //Todo: make it dynamically chosen
         console.log(this.requestBody.login);

@@ -167,6 +167,30 @@
     cursor: pointer;
 }
 
+.participants_button {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    background-image: url(../img/participants.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute; right: 30px; top: 5px;
+    cursor: pointer;
+}
+
+.participants_button_text {
+    display: none;
+    text-align: right;
+    width: 100px;
+    position: absolute;
+    right: 40px;
+    color: orange;
+}
+
+.participants_button:hover .participants_button_text {
+    display: block;
+}
+
 .auto_fetch_visible {
     display: block !important;
 

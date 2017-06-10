@@ -20,7 +20,7 @@
         </div>
     </div>
     <div id="registration_form_container" [ngClass]="{ enable_blur: mSignUpStarted }">
-        <form class="form-container">
+        <form class="form-container" (ngSubmit)="onSubmit($event)">
             <div class="form-title"><h2>Sign up</h2></div>
             <div class="form-title">Login</div>
             <input class="form-field" [(ngModel)]="requestBody.login" type="text" name="login" /><br />
@@ -52,6 +52,7 @@
             <input class="form-field" [(ngModel)]="requestBody.info.first_name" type="text" name="fn" /><br />
             <div class="form-title">Last name <span class="optional">(optional)</span></div>
             <input class="form-field" [(ngModel)]="requestBody.info.last_name" type="text" name="ln" /><br />
+            <button type="submit" style="display: none;"></button>
         </form>
     </div>
     <div class="submit-container" *ngIf="!mSignUpStarted">

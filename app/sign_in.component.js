@@ -62,6 +62,10 @@ System.register(["@angular/core", "./session.service", "./window_mgr.service", "
                             y + "px";
                     });
                 }
+                SignInComponent.prototype.onSubmit = function (ev) {
+                    ev.preventDefault();
+                    this.performSignIn();
+                };
                 SignInComponent.prototype.performSignIn = function () {
                     var self = this;
                     this.statusWindow.show();

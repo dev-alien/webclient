@@ -138,10 +138,10 @@ input[type=checkbox].css-checkbox:checked + label.css-label {
 }
 
 .css-label{
-    background-image:url(../img/dark-check-green.png);
+    background-image:url(../../img/dark-check-green.png);
 }
 
-.web-two-style{background-image:url(../img/web-two-style.png);}
+.web-two-style{background-image:url(../../img/web-two-style.png);}
 
 input[type=checkbox].css-checkbox.med + label.css-label.med {
     padding-left:22px;

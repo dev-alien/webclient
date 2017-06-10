@@ -4,6 +4,11 @@
         <div class="close_button" (click)="conversation.isOpen = false">
             x
         </div>
+        <div class="participants_button" (click)="conversation.isOpen = false">
+            <div class="participants_button_text">
+                PARTICIPANTS
+            </div>
+        </div>
     </div>
     <div #messages_container id="conversation_box_container">
         <div #auto_fetch [ngClass]="{'auto_fetch_visible': fetchStatus.length > 0}" (click)="fetchMore()">{{ fetchStatus }}</div>
