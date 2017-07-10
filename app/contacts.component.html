@@ -11,27 +11,12 @@
     </div>
     <div #contactsContainer id="contacts_container">
         <div id="London" class="tabcontent">
-            <div *ngFor="let entry of contacts | keys" class="contacts_entry">
-                <div class="remove_icon" (click)="deleteContact(entry)"></div>
-                <div class="contacts_icon">
-                    <div class="online_status green">
-                    </div>
-                </div>
-                <div class="contacts_content">
-                    <div class="contact_name">
-                        <span class="contact_first_name" *ngIf="entry.value.info.first_name" >
-                            {{ entry.value.info.first_name }}
-                        </span>
-                        <span class="contact_last_names" *ngIf="entry.value.info.first_name" >
-                            {{ entry.value.info.last_name }}
-                        </span>
-                        @{{ entry.value.login }}
-                    </div>
-                    <div class="last_">
-
-                    </div>
-                </div>
-            </div>
+            <app-contact-entry
+                *ngFor="let entry of contacts | keys"
+                [contact]="entry.value"
+                (onContactDeleted)="deleteContact(entry)"
+            >
+            </app-contact-entry>
         </div>
 
         <div id="Paris" class="tabcontent">

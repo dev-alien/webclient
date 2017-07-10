@@ -68,18 +68,6 @@ ul.tab li a:hover {background-color: #ddd;}
     height: 40px;
 }
 
-.contacts_entry {
-    background-color: white;
-    margin-top: 5px;
-    width: 300px;
-    height: 40px;
-    padding-top: 5px;
-}
-
-.contacts_entry:hover {
-    background-color: lightgrey;
-}
-
 .contacts_requests_caption {
     background-color: white;
     margin-top: 5px;
@@ -88,37 +76,6 @@ ul.tab li a:hover {background-color: #ddd;}
     padding-top: 5px;
     padding-left: 5px;
 }
-
-
-
-.contacts_icon {
-    position: absolute;
-    margin-left: 5px;
-    width: 32px;
-    height: 32px;
-    border: 2px solid black;
-}
-
-.contact_name {
-    padding-top: 9px;
-    padding-left: 25px;
-    font-weight: bold;
-}
-
-.online_status {
-    position: absolute;
-    bottom: 0;
-    width: 10px;
-    height: 10px;
-    border-top: solid 2px black;
-    border-right: solid 2px black;
-    background-color: indianred;
-}
-
-.online_status.green {
-    background-color: forestgreen;
-}
-
 
 .contacts_textarea {
     padding: 5px;
@@ -205,26 +162,7 @@ ul.tab li a:hover {background-color: #ddd;}
     transition: 0.3s;
 }
 
-.remove_icon {
-    cursor: pointer;
-    float: right;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    margin-top: 5px;
-    background-image: url("../media/remove.png");
-    background-size: 100%;
-}
 
-.accept_icon {
-     cursor: pointer;
-     float: right;
-     width: 22px;
-     height: 22px;
-     margin-top: 4px;
-     background-image: url("../media/checkmark.svg");
-     background-size: 100%;
- }
 
 .incoming_contact_name {
     padding-top: 9px;
