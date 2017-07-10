@@ -4,7 +4,8 @@
 
 body {
     margin: 0;
-    font-family: dvsm, 'consolas', cursive;
+    font-family: 'Gentium Basic', serif;
+    font-size: 14px;
 }
 
 header {
@@ -41,7 +42,7 @@ li.left {
 
 
 .navigation li a.menubutton {
-   font-size: 0.9rem;
+   font-size: 1.1em;
    font-weight: bold;
    color: #ffffff;
    display: block;
@@ -97,18 +98,6 @@ li.left {
     border-left: 1px solid #505050;
 }
 
-/* CHECKBOXES */
-
-/*
-label {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-*/
 
 input[type=checkbox].css-checkbox {
     position: absolute;

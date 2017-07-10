@@ -32,11 +32,6 @@
     width: calc(100%-5px);
     height: 25px;
     background-color: darkgreen;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
     cursor: move;
 }
 
@@ -48,25 +43,15 @@
 }
 
 #add_contact_status_message {
-    font-size: 12px;
     text-align: center;
     padding-top: 10px;
 }
 
-.close_button {
-    width: 15px;
-    height: 20px;
-    background-color: dimgrey;
-    padding-left: 5px;
-    position: absolute; right: 6px; top: 5px;
-    cursor: pointer;
-}
 
 #add_contact_window {
     display: none;
     top: 50px;
     left: 123px;
-    font-family: dvsm, 'consolas', cursive;
     position: fixed;
     width: 300px;
     padding-bottom: 30px;
@@ -81,11 +66,6 @@
     width: 293px;
     height: 25px;
     background-color: black;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
     cursor: move;
 }
 
@@ -135,7 +115,7 @@
 }
 .form-container h2 {
     text-shadow: #fdf2e4 0 1px 0;
-    font-size:18px;
+    font-size: 1.3em;
     margin: 0 0 10px 0;
     font-weight:bold;
     text-align:center;
@@ -143,7 +123,6 @@
 .form-title {
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 14px;
     text-shadow: #fdf2e4 0 1px 0;
 }
 
@@ -163,7 +142,6 @@
     color: #000000;
     margin-top: 2px;
     padding: 3px 18px;
-    font-size: 14px;
     text-decoration: none;
     vertical-align: middle;
 }
@@ -177,14 +155,14 @@
 }
 
 #password_hint {
-    font-size: 10px;
+    font-size: 0.8em;
     width: 100%;
     display: none;
     border: 1px black;
 }
 
 #email_hint {
-    font-size: 10px;
+    font-size: 0.6em;
     width: 100%;
     display: none;
     border: 1px black;

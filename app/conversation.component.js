@@ -54,6 +54,8 @@ System.register(["@angular/core", "./session.service", "./window_mgr.service", "
                     this.id = "";
                     this.fetchStatus = "";
                     this.messages = [];
+                    this.showParticipants = false;
+                    this.participantsHovered = false;
                     this.noMoreMessagesAvailable = false;
                     this.fetchStarted = false;
                     this.conversationWasEmpty = false;

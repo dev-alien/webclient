@@ -1,6 +1,10 @@
 <div #mainBlock [ngClass]="{'force_display': isOpen}" id='conversations_window' onmousedown="draggable_window.showIt(this)">
-    <div id='conversations_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
-        Conversations
+    <div id='conversations_caption'
+         onmousedown='draggable_window.startMoving(event, this.parentElement);'
+         onmouseup='draggable_window.stopMoving(this.parentElement);'
+         class="no_select"
+    >
+        <b>Conversations</b>
         <div class="close_button" (click)="isOpen = false">
             x
         </div>

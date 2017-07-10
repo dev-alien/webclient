@@ -26,6 +26,9 @@ import {MessageComponent} from "./message.component";
 import {UserInfoLink} from "./user_info_link.component";
 import {CreateConversationComponent} from "./create_conversation.component";
 import {UsersSelectionBox} from "./users_selection_box.component";
+import {ConversationParticipantsComponent} from "./conversation_participants.component";
+import {UserEntryComponent} from "./user_entry.component";
+import {ContactEntryComponent} from "./contact_entry.component";
 
 const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true
@@ -55,8 +58,11 @@ const PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         MessageComponent,
         UserInfoLink,
         CreateConversationComponent,
+        UserEntryComponent,
+        ConversationParticipantsComponent,
         UsersSelectionBox,
-        KeysPipe
+        KeysPipe,
+        ContactEntryComponent
     ],
     bootstrap: [AppComponent],
 })

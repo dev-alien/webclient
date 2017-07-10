@@ -1,0 +1,31 @@
+.window_icon {
+    padding-top: 5px;
+    float: left;
+}
+
+.window_title {
+    position: relative;
+    padding-top: 0.5em;
+    left: 5px;
+    display: block;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    font-size: 1.1em;
+    height: 1.1em;
+}
+
+.close_button {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+    position: absolute; right: 6px; top: 5px;
+}
+
+.close_button:hover {
+    cursor: pointer;
+    opacity: 1;
+}

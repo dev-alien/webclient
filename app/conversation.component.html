@@ -1,15 +1,33 @@
 <div #selfcb  [ngClass]="{'force_display': isShown}" class='conversation_box_window' onmousedown="draggable_window.showIt(this)">
-    <div class='conversation_box_caption' onmousedown='draggable_window.startMoving(event, this.parentElement);' onmouseup='draggable_window.stopMoving(this.parentElement);'>
-        <div id="conversation_box_caption_title">&#9993; {{ conversation.name }}</div>
-        <div class="close_button" (click)="conversation.isOpen = false">
-            x
+    <div class='conversation_box_caption no_select'
+         onmousedown='draggable_window.startMoving(event, this.parentElement);'
+         onmouseup='draggable_window.stopMoving(this.parentElement);'
+    >
+        <img src="../img/conversation_icon.png" class="window_icon">
+        <div class="window_title">
+            {{ conversation.name }}
         </div>
-        <div class="participants_button" (click)="conversation.isOpen = false">
-            <div class="participants_button_text">
-                PARTICIPANTS
+        <div class="close_button" (click)="conversation.isOpen = false">
+            <img
+                    src="../img/close_button.png"
+                    onmouseover="this.src='../img/close_button_red.png';"
+                    onmouseout="this.src='../img/close_button.png';"
+            >
+        </div>
+        <div class="participants_button" (click)="showParticipants = !showParticipants">
+            <img
+                    (mouseover)="participantsHovered = true"
+                    (mouseleave)="participantsHovered = false"
+                    class="participants_button_image"
+                    [ngClass]="{'participants_button_enabled': participantsHovered || showParticipants}"
+                    src="../img/participants.png"
+            >
+            <div class="participants_button_text" [ngClass]="{'participants_button_text_enabled': participantsHovered || showParticipants}">
+                Partiticipants
             </div>
         </div>
     </div>
+    <conversation-participants *ngIf="showParticipants"></conversation-participants>
     <div #messages_container id="conversation_box_container">
         <div #auto_fetch [ngClass]="{'auto_fetch_visible': fetchStatus.length > 0}" (click)="fetchMore()">{{ fetchStatus }}</div>
         <message *ngFor="let message of conversation.messages" [message]="message"></message>

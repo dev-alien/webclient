@@ -1,0 +1,13 @@
+.form-container h2 {
+    text-shadow: #fdf2e4 0 1px 0;
+    font-size: 1.4em;
+    margin: 0 0 10px 0;
+    font-weight:bold;
+    text-align:center;
+}
+
+.form-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-shadow: #fdf2e4 0 1px 0;
+}

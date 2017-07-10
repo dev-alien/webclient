@@ -32,20 +32,11 @@ ul.tab li a:hover {background-color: #ddd;}
     background:none !important;
 }
 
-.close_button {
-    width: 15px;
-    height: 20px;
-    background-color: dimgrey;
-    padding-left: 5px;
-    position: absolute; right: 6px; top: 5px;
-    cursor: pointer;
-}
 
 #contacts_window {
     display: none;
     top: 50px;
     left: 760px;
-    font-family: dvsm, 'consolas', cursive;
     position: fixed;
     width: 300px;
     height: 400px;
@@ -54,11 +45,6 @@ ul.tab li a:hover {background-color: #ddd;}
 }
 
 #contacts_caption {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
     padding-top: 5px;
     padding-left: 7px;
     color: white;
@@ -90,6 +76,10 @@ ul.tab li a:hover {background-color: #ddd;}
     padding-top: 5px;
 }
 
+.contacts_entry:hover {
+    background-color: lightgrey;
+}
+
 .contacts_requests_caption {
     background-color: white;
     margin-top: 5px;
@@ -99,9 +89,7 @@ ul.tab li a:hover {background-color: #ddd;}
     padding-left: 5px;
 }
 
-.contacts_entry:hover {
-    background-color: lightgrey;
-}
+
 
 .contacts_icon {
     position: absolute;
@@ -114,7 +102,6 @@ ul.tab li a:hover {background-color: #ddd;}
 .contact_name {
     padding-top: 9px;
     padding-left: 25px;
-    font-size: 14px;
     font-weight: bold;
 }
 
@@ -134,7 +121,6 @@ ul.tab li a:hover {background-color: #ddd;}
 
 
 .contacts_textarea {
-    font-size: 13px;
     padding: 5px;
     position: relative;
     display:inline-block;
@@ -216,7 +202,6 @@ ul.tab li a:hover {background-color: #ddd;}
     color: black;
     text-align: center;
     text-decoration: none;
-    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -244,6 +229,5 @@ ul.tab li a:hover {background-color: #ddd;}
 .incoming_contact_name {
     padding-top: 9px;
     padding-left: 45px;
-    font-size: 14px;
     font-weight: bold;
 }

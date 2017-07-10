@@ -3,7 +3,6 @@
     min-width: 300px;
     top: 50px;
     left: 430px;
-    font-family: dvsm, 'consolas', cursive;
     position: fixed;
     width: 300px;
     height: 400px;
@@ -12,19 +11,10 @@
 }
 
 .conversation_box_caption {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -khtml-user-select: none;
-    user-select: none;
-
-    padding-top: 5px;
     padding-left: 7px;
     color: white;
-    width: auto;
-    height: 25px;
+    height: 30px;
     background-color: black;
-    cursor: move;
 }
 
 .conversation_box_caption_title {
@@ -80,31 +70,6 @@
     border: 2px solid black;
 }
 
-.message_content {
-    padding-left: 5px;
-    font-size: 13px;
-}
-
-.message_author_icon {
-    float: left;
-    margin-top: 5px;
-    margin-left: 6px;
-    width: 16px;
-    height: 16px;
-    background-color: white;
-    border: 1px solid black;
-    margin-bottom: 2px;
-}
-
-.message_author_name {
-    position: relative;
-    left: 7px;
-    height: 21px;
-    width: 80%;
-    padding-top: 7px;
-    font-size: 12px;
-}
-
 .conversation_resize_box {
     position: absolute;
     bottom: 0;
@@ -117,7 +82,6 @@
 }
 
 .conversation_box_textarea {
-    font-size: 13px;
     padding: 5px;
     position: relative;
     display:inline-block;
@@ -130,12 +94,10 @@
 }
 
 .conversation_box_textarea:focus {
-    font-size: 13px;
-
     outline: none !important;
     border-top:2px solid black;
     border-bottom:2px solid black;
-    box-shadow: 0 0 10px #719ECE;
+    box-shadow: 0 0 10px darkcyan;
 }
 
 .conversation_box_empty_entry {
@@ -158,43 +120,52 @@
     background-color: lightgrey;
 }
 
-.close_button {
-    width: 15px;
-    height: 20px;
-    background-color: dimgrey;
-    padding-left: 5px;
-    position: absolute; right: 6px; top: 5px;
-    cursor: pointer;
-}
-
 .participants_button {
     width: 20px;
     height: 20px;
-    background-color: white;
-    background-image: url(../img/participants.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute; right: 30px; top: 5px;
+    cursor: pointer;
+}
+
+.participants_button_image {
+    filter: brightness(0.5) invert(1);
+    cursor: pointer;
+}
+
+.participants_button_enabled {
+    filter: brightness(1);
     cursor: pointer;
 }
 
 .participants_button_text {
     display: none;
     text-align: right;
-    width: 100px;
+    font-weight: bold;
     position: absolute;
-    right: 40px;
-    color: orange;
+    top: 0;
+    padding-top: 2px;
+    right: 25px;
+    color: black;
 }
 
-.participants_button:hover .participants_button_text {
-    display: block;
+.participants_button_text_enabled {
+    display: inline-block;
+    background-color: white;
+}
+
+.participants_button_text_enabled::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/caption_tabs_before.png");
 }
 
 .auto_fetch_visible {
     display: block !important;
 
-    font-size: 13px;
     border-left: solid 5px orange;
     background-color: white;
     padding-left: 5px;

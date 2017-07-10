@@ -47,6 +47,8 @@ export class ConversationComponent implements AfterViewChecked {
     private id: string = "";
     private fetchStatus: string = "";
     private messages: Message[] = [];
+    private showParticipants = false;
+    private participantsHovered = false;
 
     constructor(private sSessionManager: UserSession,
                 private sWindowManager: WindowManager,
